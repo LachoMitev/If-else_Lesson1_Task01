@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main()
+{
+	double a;
+
+	std::cin >> a;
+
+	if (a >= 5.50) {
+
+		std::cout << "Excellent!" << std::endl;
+	}
+
+
+	return 0;
+}

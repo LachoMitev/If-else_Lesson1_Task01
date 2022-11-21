@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	double travelPrice;
+
+	
+
+	int puzzles;
+	int dolls;
+	int bears;
+	int minions;
+	int trucks;
+
+	std::cin >> travelPrice;
+	std::cin >> puzzles;
+	std::cin >> dolls; 
+	std::cin >> bears;
+	std::cin >> minions;
+	std::cin >> trucks;
+
+	double puzzlePrice = 2.60;
+	double dollsPrice = 3.0;
+	double bearPrice = 4.10;
+	double minionPrice = 8.20;
+	double truckPrice = 2.0;
+
+	int toysCount = puzzles + dolls + bears + minions + trucks;
+
+	double orderPrice = (puzzles * puzzlePrice) + (dolls * dollsPrice) + (bears * bearPrice) + (minions * minionPrice) + (trucks * truckPrice);
+	double rent = orderPrice * 0.1;
+	double finalPrice = orderPrice - rent;
+
+
+	if (toysCount >= 50)
+	{
+		finalPrice = finalPrice - (finalPrice * 0.25);
+	}
+
+	if (finalPrice >= travelPrice)
+	{
+		std::cout.precision(2);
+		std::cout << std::fixed;
+		std::cout << "Yes! " << finalPrice - travelPrice << " lv left." << std::endl;
+	}
+
+	else {
+
+		std::cout.precision(2);
+		std::cout << std::fixed;
+		std::cout << "Not enough money! " << travelPrice - finalPrice << " lv needed." << std::endl;
+	}
+
+	return 0;
+}

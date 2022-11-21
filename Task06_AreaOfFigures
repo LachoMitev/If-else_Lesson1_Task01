@@ -1,0 +1,73 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	string figure;
+
+	std::cin >> figure;
+
+
+
+	if (figure == "square")
+	{
+		double a;
+
+		std::cin >> a;
+
+		double area = (a * a) *1.000;
+
+		std::cout.precision(3);
+		std::cout << std::fixed;
+		std::cout << area << std::endl;
+
+	}
+
+	if (figure == "rectangle")
+	{
+		double a;
+
+		double b;
+
+		std::cin >> a >> b;
+
+		double area = a * b;
+
+		std::cout.precision(3);
+		std::cout << std::fixed;
+		std::cout << area << std::endl;
+
+	}
+
+	if (figure == "circle")
+	{
+		double a;
+
+		std::cin >> a;
+
+		double area = 3.141592653589793238 * (a * a);
+
+		std::cout.precision(3);
+		std::cout << std::fixed;
+		std::cout << area << std::endl;
+
+	}
+
+	if (figure == "triangle")
+	{
+		double a;
+		double b;
+
+		std::cin >> a >> b;
+
+		double area = (a * b) / 2;
+
+		std::cout.precision(3);
+		std::cout << std::fixed;
+		std::cout << area << std::endl;
+
+	}
+
+	return 0;
+}
